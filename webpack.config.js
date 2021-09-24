@@ -3,6 +3,10 @@ const path = require("path");
 
 module.exports = {
   mode: "development", // mode: 'production',
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+  },
   entry: "./src/index.js", //默认就是src下面的index.js
   output: {
     path: path.resolve(__dirname, "dist"),
